@@ -35,9 +35,67 @@ img {
 }
 
 .container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+  max-width: 318px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .section-description {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+  .section-description-list {
+    width: calc((100% - 24px) / 2);
+  }
+  .description-title {
+    text-align: left;
+  }
+
+  .our-team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+  .our-team-background {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
+  .section-description {
+    width: calc((100% - 72px) / 4);
+  }
+  .container-description-icon {
+    display: flex;
+    height: 112px;
+    background-color: #cecece;
+    margin-bottom: 8px;
+  }
+  .container-description-icon {
+    display: flex;
+    height: 112px;
+    background-color: #cecece;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
 }
 
 a {
@@ -292,29 +350,40 @@ body {
   background-color: #404bbf;
 }
 
+.section-paddings {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 72px;
+}
+/*
 .section-description {
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
+*/
 
 .section-description-list {
   width: calc((100% - 72px) / 4);
   column-gap: 24px;
+  row-gap: 72px;
 }
 
 .container-description-icon {
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  width: 264px;
-  height: 112px;
-  background-color: #f4f4fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
+  display: none;
 }
 
+.description-title {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/*
 .description-title {
   font-weight: 500;
   font-size: 20px;
@@ -324,6 +393,7 @@ body {
   display: flex;
   margin-bottom: 8px;
 }
+  */
 
 .description-text {
   line-height: 1.5;
